@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>CONVERTIDOR </title>
+<link  rel="stylesheet" href="css/Estilos.css">
+</head>
+
+<body bgcolor="FFFFF0">
+<form name="convertidor">
+<table>
+<tr>
+<td><br> Pesos: <input type="text" name="pesos"></td><td><br><input type="button" value="CONVERTIR" onclick="calcular();"></td>
+</tr>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<td><br> Dolar      : <input type="text" name="dolar"></td>
+<br>
+<td><br> Euro       : <input type="text" name="Euro"></td>
+<br>
+<td><br> Real       : <input type="text" name="Real"></td>
+<br>
+<td><br> P. Uruguayo: <input type="text" name="pu"></td>
+</tr>
+</thead>
+</table>
+<br>
+<br>
+<br>
+<br>
+
+<script type="text/javascript">
+
+function calcular(){
+
+var pes = (document.convertidor.pesos.value)*1;
+
+if(pes == 0 ){alert( "no ha llenado el espacio de pesos ingrese un numero")}else{
+var tot = pes / 44.44;
+tot = tot.toFixed(2);
+
+document.convertidor.dolar.value = tot;
+
+var tot1 = pes / 50.61;
+tot1 = tot1.toFixed(2);
+
+document.convertidor.Euro.value = tot1;
+
+var tot2 = pes / 11.78;
+tot2 = tot2.toFixed(2);
+
+document.convertidor.Real.value = tot2;
+
+var tot3 = pes / 1.29;
+tot3 = tot3.toFixed(2);
+
+document.convertidor.pu.value = tot3;
+}
+
+}
+
+</script>
+
+<table>
+<thead>
+<tr>
+  <td><strong>MONEDA</strong></td>
+  <td><strong>COMPRA</strong></td>
+  <td><strong>VENTA</strong></td>
+</tr>
+</thead>
+
+<tr>
+  <td>Dólar USA</td>
+  <td>$42,41</td>
+  <td>$44,44</td>
+</tr>
+<tr>
+  <td>Euro</td>
+  <td>$48,06</td>
+  <td>$50,61</td>
+</tr>
+<tr>
+  <td>Real</td>
+  <td>$10,69</td>
+  <td>$11,78</td>
+</tr>
+<tr>
+  <td>Peso Uruguayo</td>
+  <td>$1,15</td>
+  <td>$1,29</td>
+</tr>
+
+
+
+</table>
+</form>
+
+<div class="footer">
+<p class="rights">Alejo Inchausti 4°3 <a href="#">volver</a></p>
+
+</div>
+
+</body>
+</html>
